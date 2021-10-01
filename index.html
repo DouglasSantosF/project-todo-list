@@ -11,20 +11,32 @@
   <header id="title">
     <h1>Minha Lista de Tarefas</h1>
   </header>
-  
-  <p id="funcionamento"> Clique duas vezes em um item para marcá-lo como completo </p>
 
-  <input id="texto-tarefa" type="text">
-  <button id="criar-tarefa"> adicionar </button>
-  <button id="apaga-tudo"> Apagar tudo</button>
-  <button id="remover-finalizados">Completo</button>
-  <button id="salvar-tarefas"> Salvar</button>
-  <button id="mover-cima"> Subir</button>
-  <button id="mover-baixo"> Descer</button>
-  <button id="remover-selecionado">Remover selecionado</button>
-  <ol id="lista-tarefas">
-     
-  </ol>
+<div class="funcionamento-countainer">
+  <p id="funcionamento"> Clique duas vezes em um item para marcá-lo como completo </p>
+</div>  
+
+<input id="texto-tarefa" type="text">
+<div class="countainer-area">
+  <div class="countainer-buttons">
+    <div class="flex">
+      <button id="criar-tarefa"> adicionar </button>
+      <button id="apaga-tudo"> Apagar tudo</button>
+      <button id="remover-finalizados">Completo</button>
+    </div>
+    <div class="flex">
+      <button id="salvar-tarefas"> Salvar</button>
+      <button id="mover-cima"> Subir</button>
+      <button id="mover-baixo"> Descer</button>
+    </div>
+    <div class="button-foot">
+      <button id="remover-selecionado">Remover selecionado</button>
+    </div>
+  </div>
+  <div class='countainer-list'> 
+    <ol id="lista-tarefas">  </ol>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
