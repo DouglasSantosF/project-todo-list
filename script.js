@@ -9,19 +9,19 @@ const botao5 = document.querySelector('#mover-cima');
 const botao6 = document.querySelector('#mover-baixo');
 const botao7 = document.querySelector('#remover-selecionado');
 
-function completed(event){
+function completed(event) {
   const itemDaLista = document.querySelectorAll('.lista');
-  for (let index = 0; index < itemDaLista.length; index += 1){
-    if (itemDaLista[index] === event.target){
+  for (let index = 0; index < itemDaLista.length; index += 1) {
+    if (itemDaLista[index] === event.target) {
       event.target.classList.toggle('completed');
     }
   }
 }
 
-function selection(event){
+function selection(event) {
   const itemDaLista = document.querySelectorAll('.lista');
-  for (let index = 0; index < itemDaLista.length; index += 1){
-    if (itemDaLista[index] === event.target){
+  for (let index = 0; index < itemDaLista.length; index += 1) {
+    if (itemDaLista[index] === event.target) {
       event.target.classList.add('selected');
     } else {
       itemDaLista[index].classList.remove('selected');
@@ -29,10 +29,10 @@ function selection(event){
   }
 }
 
-function adicionaItem(){
+function adicionaItem() {
   const inputTexto = document.querySelector('#texto-tarefa');
 
-  if (inputTexto.value === ''){
+  if (inputTexto.value === '') {
     alert('Texto inválido!!');
     return;
   }
@@ -49,7 +49,7 @@ function adicionaItem(){
 
 botao1.addEventListener('click', adicionaItem);
 
-function apagaTudo(){
+function apagaTudo() {
   const ol = document.querySelector('ol');
   const itemDaLista = document.querySelectorAll('.lista');
   ol.remove(itemDaLista);
@@ -57,23 +57,23 @@ function apagaTudo(){
 
 botao2.addEventListener('click', apagaTudo);
 
-function removeCompleto(){
+function removeCompleto() {
   const listaCompletos = document.querySelectorAll('.completed');
   const paiCompletos = document.querySelector('#lista-tarefas');
 
-  for (let index = 0; index < listaCompletos.length; index += 1){
+  for (let index = 0; index < listaCompletos.length; index += 1) {
     paiCompletos.removeChild(listaCompletos[index]);
   }
 }
 
 botao3.addEventListener('click', removeCompleto);
 
-function addStorage(){
+function addStorage() {
   const htmlList = lista.innerHTML;
   localStorage.setItem('listaSalva', htmlList);
 }
 
-function recuperaStorage(){
+function recuperaStorage() {
   const itemStorage = localStorage.getItem('listaSalva');
   lista.innerHTML = itemStorage;
   const itemDaLista = document.querySelectorAll('.lista');
@@ -86,7 +86,7 @@ function recuperaStorage(){
 botao4.addEventListener('click', addStorage);
 recuperaStorage();
 
-function removerSelecionado(){
+function removerSelecionado() {
   const itemSelecionado = document.querySelector('.selected');
   lista.removeChild(itemSelecionado);
 }
@@ -95,11 +95,11 @@ botao7.addEventListener('click', removerSelecionado);
 
 // referência https://developer.mozilla.org/pt-BR/docs/Web/API/Node/insertBefore e ajuda da sala de dúvidas.
 // insertBefore(); -> elementopai.insertBefore(novoElemento. elementoPosteior);
-function moverCima(){
+function moverCima() {
   const itemSelecionado = document.querySelector('.selected');
-  if (itemSelecionado !== null){
+  if (itemSelecionado !== null) {
     const elementoCima = itemSelecionado.previousElementSibling;
-    if (itemSelecionado !== lista.firstChild){
+    if (itemSelecionado !== lista.firstChild) {
       lista.insertBefore(itemSelecionado, elementoCima);
     }
   }
@@ -107,11 +107,11 @@ function moverCima(){
 
 botao5.addEventListener('click', moverCima);
 
-function moverBaixo(){
+function moverBaixo() {
   const itemSelecionado = document.querySelector('.selected');
-  if (itemSelecionado !== null){
+  if (itemSelecionado !== null) {
     const elementoBaixo = itemSelecionado.nextElementSibling;
-    if (itemSelecionado !== lista.lastChild){
+    if (itemSelecionado !== lista.lastChild) {
       lista.insertBefore(itemSelecionado, elementoBaixo.nextElementSibling);
     }
   }
