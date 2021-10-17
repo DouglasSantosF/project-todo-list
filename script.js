@@ -118,3 +118,4 @@ function moverBaixo() {
 }
 
 botao6.addEventListener('click', moverBaixo);
+
