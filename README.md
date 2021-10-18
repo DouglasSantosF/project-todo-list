@@ -72,7 +72,7 @@ caso queira desfazer esta ação, basta dar um duplo click novamente.
 ---
 
 ## Aqui a baixo podemos ver uma pequena simulação de como funciona
-
+<img src="todo-list-example.gif" width="600">
 
 ## Caso queira ver na prática como funciona, acesse o link a baixo: 
 https://douglassantosf.github.io/project-todo-list/
