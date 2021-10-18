@@ -28,13 +28,18 @@ e **Remover Selecionado**.
 
 <br>
 <br>
+
 **Adicionar**: Adiciona a Ação colocada na entrada pelo usuário em uma lista ordenada, e caso depois seja adicionada outra ação,<br>
 ela ficará abaixo da anterior na lista.
+
 <br>
 <br>
+
 **Apagar tudo**: Limpa a lista de afazeres.
+
 <br>
 <br>
+
 **Completo** : Remove da lista apenas os afazeres indicados como completos.
 * Para fazer com que um item seja indicado como completo, é preciso dar um duplo click em cima dele, desta maneira ele ficará riscado,
 caso queira desfazer esta ação, basta dar um duplo click novamente.
